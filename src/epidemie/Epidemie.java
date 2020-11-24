@@ -15,11 +15,8 @@ public class Epidemie {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println("Hello World !");
-        
-        for (int i = 0; i<25; i++){
-            System.out.println("Bonjour !");
-        }
+        EulerExplicite euler = new EulerExplicite();
+        euler.printResult(100);
     }
     
 }

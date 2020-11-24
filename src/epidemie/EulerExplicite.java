@@ -16,6 +16,13 @@ public class EulerExplicite {
     private int I0 = 200;
     
     public void printResult(int stop){
-        int start = I0;
+        double Un = I0;
+        double UnPlusUn;
+        for (int i = 0; i<stop; i++){
+            UnPlusUn = Un + k*h*Un*(P-Un);
+            System.out.println(UnPlusUn + "\n");
+            Un = UnPlusUn;
+        }
+        
     }
 }
