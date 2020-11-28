@@ -5,6 +5,9 @@
  */
 package epidemie;
 
+import java.util.ArrayList;
+import javax.swing.SwingUtilities;
+
 /**
  *
  * @author Alexis Robin
@@ -15,8 +18,13 @@ public class Epidemie {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        EulerExplicite euler = new EulerExplicite();
-        euler.printResult(100);
+        SwingUtilities.invokeLater(new Runnable(){
+            @Override
+            public void run() {
+                Graph.createAndShowGUI();
+            }
+            
+        });
     }
     
 }
